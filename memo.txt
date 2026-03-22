@@ -1,0 +1,24 @@
+Project: Calender_Skout
+Working title: Smart Calendar App Build
+Last updated: 2026-03-23
+
+What we did
+- Created the initial project workspace.
+- Added a README with the project goal.
+- Added the Apache 2.0 license file.
+- Prepared the repo for Git initialization and GitHub publishing.
+
+Features and direction
+- Smart calendar application planning and build workspace.
+- ChatGPT-assisted product and engineering workflow.
+
+Process notes
+- The folder started empty.
+- GitHub CLI is not installed on this machine yet.
+- Local repository setup is being prepared first.
+
+What is next
+- Initialize git in this folder.
+- Make the first commit.
+- Create a GitHub repository named `Calender_Skout`.
+- Connect the local repo to GitHub and push the initial branch.

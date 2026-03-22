@@ -1,0 +1,17 @@
+Project: Calender_Skout
+Last updated: 2026-03-23
+
+Tech stack
+- Not selected yet.
+
+Dependencies
+- None yet.
+
+Version record
+- No package manager initialized yet.
+
+Bugs
+- None recorded yet.
+
+Tests
+- No tests created yet.
