@@ -6,7 +6,11 @@ What we did
 - Created the initial project workspace.
 - Added a README with the project goal.
 - Added the Apache 2.0 license file.
-- Prepared the repo for Git initialization and GitHub publishing.
+- Initialized git with a `main` branch.
+- Created the first local commit.
+- Installed GitHub CLI (`gh`) to manage the remote repository.
+- Created the GitHub repository `Calender_Skout`.
+- Connected the local repo to `origin` and pushed `main`.
 
 Features and direction
 - Smart calendar application planning and build workspace.
@@ -14,11 +18,12 @@ Features and direction
 
 Process notes
 - The folder started empty.
-- GitHub CLI is not installed on this machine yet.
-- Local repository setup is being prepared first.
+- The repository is live at: https://github.com/Abhirsc/Calender_Skout
+- The project currently contains planning and setup documentation only.
+- The next build phase is choosing the app stack and first feature scope.
 
 What is next
-- Initialize git in this folder.
-- Make the first commit.
-- Create a GitHub repository named `Calender_Skout`.
-- Connect the local repo to GitHub and push the initial branch.
+- Decide the initial product scope for the smart calendar app.
+- Choose the frontend, backend, database, and auth stack.
+- Create the first application scaffold.
+- Start with a small feature such as event creation and event listing.

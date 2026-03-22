@@ -2,16 +2,22 @@ Project: Calender_Skout
 Last updated: 2026-03-23
 
 Tech stack
-- Not selected yet.
+- Documentation-first project setup
+- Git
+- GitHub
+- GitHub CLI (`gh`) 2.88.1
 
 Dependencies
-- None yet.
+- No app dependencies yet.
+- Local tooling used so far: Git 2.50.1, GitHub CLI 2.88.1
 
 Version record
 - No package manager initialized yet.
+- Remote repository: https://github.com/Abhirsc/Calender_Skout
 
 Bugs
 - None recorded yet.
 
 Tests
 - No tests created yet.
+- No automated test framework added yet.
