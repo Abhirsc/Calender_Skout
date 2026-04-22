@@ -1,6 +1,6 @@
 Project: Calender_Skout
 Working title: Smart Calendar App Build
-Last updated: 2026-03-23
+Last updated: 2026-04-23
 
 What we did
 - Created the initial project workspace.
@@ -11,6 +11,9 @@ What we did
 - Installed GitHub CLI (`gh`) to manage the remote repository.
 - Created the GitHub repository `Calender_Skout`.
 - Connected the local repo to `origin` and pushed `main`.
+- Ran the Sydney daily automation report for 2026-04-23.
+- Updated the automation memory with weather, event, transport, natural phenomenon, and celestial notes.
+- Added the required crafted-by credit to the README.
 
 Features and direction
 - Smart calendar application planning and build workspace.
@@ -21,9 +24,12 @@ Process notes
 - The repository is live at: https://github.com/Abhirsc/Calender_Skout
 - The project currently contains planning and setup documentation only.
 - The next build phase is choosing the app stack and first feature scope.
+- Automation sources checked included City of Sydney What's On, Bureau of Meteorology snippets, TfNSW/Live Traffic references, Sydney Observatory/Powerhouse, Time and Date, and Time Out Sydney.
+- Repository update on 2026-04-23 is documentation-only.
 
 What is next
 - Decide the initial product scope for the smart calendar app.
 - Choose the frontend, backend, database, and auth stack.
 - Create the first application scaffold.
 - Start with a small feature such as event creation and event listing.
+- For the automation, re-check dynamic TfNSW and Live Traffic pages directly before travel-sensitive decisions.

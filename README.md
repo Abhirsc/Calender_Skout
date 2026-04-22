@@ -9,3 +9,5 @@ This repository is the starting point for building a smart calendar application.
 ## Goal
 
 Use ChatGPT-assisted planning and implementation to design and build a smart calendar app.
+
+crafted with <3 by abhirsc :)

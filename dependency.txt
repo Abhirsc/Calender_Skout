@@ -1,5 +1,5 @@
 Project: Calender_Skout
-Last updated: 2026-03-23
+Last updated: 2026-04-23
 
 Tech stack
 - Documentation-first project setup
@@ -17,7 +17,11 @@ Version record
 
 Bugs
 - None recorded yet.
+- 2026-04-23: No app bugs found while updating repository notes.
+- 2026-04-23: No app bugs found while adding README credit.
 
 Tests
 - No tests created yet.
 - No automated test framework added yet.
+- 2026-04-23: No automated tests run; documentation-only update.
+- 2026-04-23: README/memo/dependency changes reviewed by git diff.
