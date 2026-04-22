@@ -86,4 +86,4 @@ Tests
 - Latest scan fix verification: `pytest` passed with 10 tests and `npm run build` passed.
 - Latest management-flow verification: `pytest tests/test_source_delete_api.py tests/test_saved_event_delete_api.py tests/test_delete_event_api.py tests/test_source_upload.py` passed and `npm run build` passed.
 - 2026-04-23: README/memo/dependency changes reviewed by git diff.
-- 2026-04-23: Full `.venv/bin/pytest` and frontend `npm run build` run before repository update.
+- 2026-04-23: Full `.venv/bin/pytest` and frontend `npm run build` passed before repository update.
