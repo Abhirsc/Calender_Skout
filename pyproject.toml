@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smart-calendar-app"
+version = "0.1.0"
+description = "Smart calendar MVP with FastAPI, SQLModel, React, and weekly source scanning."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Abhirsc" }
+]
+dependencies = [
+  "apscheduler==3.11.0",
+  "fastapi==0.115.12",
+  "httpx==0.28.1",
+  "icalendar==6.1.1",
+  "python-multipart==0.0.20",
+  "pydantic==2.10.6",
+  "pydantic-settings==2.7.1",
+  "python-dateutil==2.9.0.post0",
+  "sqlalchemy==2.0.37",
+  "sqlmodel==0.0.22",
+  "uvicorn[standard]==0.34.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.3.4",
+  "pytest-cov==6.0.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

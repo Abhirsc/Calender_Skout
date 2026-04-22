@@ -1,23 +1,89 @@
 Project: Calender_Skout
-Last updated: 2026-03-23
+Last updated: 2026-04-23
 
 Tech stack
-- Documentation-first project setup
+- Python 3.12
+- FastAPI
+- SQLModel / SQLAlchemy
+- SQLite
+- APScheduler
+- React
+- Vite
+- TypeScript
+- Docker
+- Docker Compose
 - Git
 - GitHub
 - GitHub CLI (`gh`) 2.88.1
 
 Dependencies
-- No app dependencies yet.
+- Backend runtime
+  - apscheduler
+  - fastapi
+  - httpx
+  - icalendar
+  - pydantic-settings
+  - python-multipart
+  - python-dateutil
+  - sqlalchemy
+  - sqlmodel
+  - uvicorn[standard]
+- Backend dev
+  - pytest
+  - pytest-cov
+- Frontend runtime
+  - date-fns
+  - react
+  - react-dom
+  - react-router-dom
+- Frontend dev
+  - @types/react
+  - @types/react-dom
+  - @vitejs/plugin-react
+  - typescript
+  - vite
 - Local tooling used so far: Git 2.50.1, GitHub CLI 2.88.1
 
 Version record
-- No package manager initialized yet.
+- Python dependencies recorded in `pyproject.toml` with pinned versions for smoother local install
+- Frontend dependencies recorded in `frontend/package.json`
 - Remote repository: https://github.com/Abhirsc/Calender_Skout
 
 Bugs
 - None recorded yet.
+- Needs real remote ICS fetching instead of embedded seed ICS examples.
+- Outlook sync is a scaffold only and does not yet implement Microsoft Graph OAuth.
+- Frontend currently expects backend API availability and does not include offline mock fallback.
+- Seed data originally used string datetimes and was corrected to real Python datetime objects for SQLite compatibility.
+- Weekly scan automation currently uses app runtime scheduling, so scans occur only while the backend process is running.
+- Shared password lock is suitable for MVP gating, but not a replacement for full user authentication.
+- Add-to-calendar currently uses ICS export rather than direct Outlook or Google write APIs.
+- Scan progress bar is a frontend progress experience and does not yet stream backend per-source progress updates.
+- Scan endpoint previously returned `{}` and was updated to return JSON-safe run payloads.
+- Event deletion was missing from the UI and API and is now implemented.
+- Source deletion and saved-item removal were missing from the management flows and are now implemented.
+- 2026-04-23: No app bugs found while updating repository notes.
+- 2026-04-23: No app bugs found while adding README credit.
+- Calendar export test previously depended on local password-gate state and is now isolated.
 
 Tests
-- No tests created yet.
-- No automated test framework added yet.
+- `tests/test_auth.py`
+- `tests/test_add_scanned_event.py`
+- `tests/test_calendar_export.py`
+- `tests/test_dedupe.py`
+- `tests/test_delete_event_api.py`
+- `tests/test_relevance.py`
+- `tests/test_saved_event_delete_api.py`
+- `tests/test_saved_event_workflow.py`
+- `tests/test_slack.py`
+- `tests/test_create_event_api.py`
+- `tests/test_public_scan.py`
+- `tests/test_source_delete_api.py`
+- `tests/test_source_upload.py`
+- Syntax verification should be run after dependency install.
+- Local browser preview is currently served from `127.0.0.1:5173` with the API on `127.0.0.1:8000`.
+- Latest verification pass: `pytest` passed with 9 tests and `npm run build` passed.
+- Latest scan fix verification: `pytest` passed with 10 tests and `npm run build` passed.
+- Latest management-flow verification: `pytest tests/test_source_delete_api.py tests/test_saved_event_delete_api.py tests/test_delete_event_api.py tests/test_source_upload.py` passed and `npm run build` passed.
+- 2026-04-23: README/memo/dependency changes reviewed by git diff.
+- 2026-04-23: Full `.venv/bin/pytest` and frontend `npm run build` run before repository update.

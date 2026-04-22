@@ -1,6 +1,6 @@
 Project: Calender_Skout
 Working title: Smart Calendar App Build
-Last updated: 2026-03-23
+Last updated: 2026-04-23
 
 What we did
 - Created the initial project workspace.
@@ -11,19 +11,89 @@ What we did
 - Installed GitHub CLI (`gh`) to manage the remote repository.
 - Created the GitHub repository `Calender_Skout`.
 - Connected the local repo to `origin` and pushed `main`.
+- Ran the Sydney daily automation report for 2026-04-23.
+- Updated the automation memory with weather, event, transport, natural phenomenon, and celestial notes.
+- Added the required crafted-by credit to the README.
+- Converted the project brief into a real starter application scaffold.
+- Built a FastAPI backend with models, services, API routes, seeding, and weekly scan scheduling.
+- Added ICS ingestion, event deduplication, relevance scoring, save/pin workflow, and Slack payload generation.
+- Built a React + Vite frontend with dark mobile-first calendar views, saved page, sources page, and settings page.
+- Added Docker, docker-compose, environment example, gitignore, and backend tests.
+- Pinned backend dependency versions to avoid slow resolver backtracking during local setup.
+- Created a local Python virtual environment and installed backend dependencies.
+- Installed frontend npm dependencies.
+- Started the frontend preview on `http://127.0.0.1:5173`.
+- Fixed a seed-data datetime issue that blocked backend startup.
+- Started the backend API on `http://127.0.0.1:8000`.
+- Added manual event creation to the unified calendar backend and frontend.
+- Updated the weekly scan logic so it targets public and conference layers only.
+- Added schedule visibility in settings for the automatic weekly public scan.
+- Added tests for manual event creation and public-only scan behavior.
+- Added an optional shared-password lock for public deployments.
+- Added auth status, login, and logout endpoints plus a frontend unlock screen.
+- Added a visible scanned-opportunities review panel so public scan results are easier to inspect.
+- Added event ICS export so interesting opportunities can be added to a personal calendar after review.
+- Improved scanning criteria UX with presets and clearer helper text.
+- Added a visible scan progress bar so public scans feel active while running.
+- Ran the public scan manually and confirmed a successful result with 2 scanned sources and 2 new events found.
+- Moved manual event creation into a date-click modal in the calendar instead of a large bottom-page form.
+- Added quick add buttons on month and week date cells for a more calendar-like workflow.
+- Ran a full verification pass with backend tests and frontend production build after the UI change.
+- Fixed the public scan deduplication bug so repeat scans do not keep inserting the same events.
+- Adjusted scan timing feedback so runs stay visible long enough to feel intentional instead of blinking away.
+- Fixed the scan API response so manual scans return real run data instead of an empty object.
+- Added `.ics` file upload support for creating new calendar feed sources.
+- Changed scanned-event add flow so it can create an in-app calendar event directly instead of only downloading an ICS file.
+- Added event deletion support from both the event drawer and the saved-events page.
+- Deleting an event now also removes linked saved-event and note records so the database stays consistent.
+- Added source deletion from the Sources tab.
+- Added “Remove from saved” so saved notes can be cleared without deleting the calendar event.
+- Added “Not interested” on scanned suggestions so review items can be removed from the suggestion list.
+- Fixed the calendar export test so it disables the optional local password gate during API setup.
 
 Features and direction
 - Smart calendar application planning and build workspace.
 - ChatGPT-assisted product and engineering workflow.
+- Unified calendar layers for work, personal, public, and conferences.
+- Mobile-first dark interface with month, week, and agenda views.
+- Smart source scanning with editable criteria and conference discovery focus.
+- Manual event creation flow for work, personal, public, and conference layers.
+- Weekly automated scan status visible from the settings page.
+- Optional lightweight password gate for shared public access.
+- Review-first workflow for scanned events before adding them to your own calendar.
+- Scan status now includes progress feedback instead of only a final completion state.
+- Event creation now feels closer to a real calendar app because it starts from the selected date.
+- Repeat scans should now report zero new events when nothing new is discovered.
+- Manual scan actions now return structured run details for the frontend to display properly.
+- Source management now supports both URL-based ICS feeds and uploaded ICS files.
+- Events can now be removed directly from the UI without manual database cleanup.
+- Source entries can now be managed with deletion, not just creation.
+- Saved events now support two different actions: remove from saved, or delete the event itself.
+- Scanned suggestions can now be dismissed if they are not relevant.
+- Calendar export test coverage is now isolated from local `.env` password settings.
 
 Process notes
 - The folder started empty.
 - The repository is live at: https://github.com/Abhirsc/Calender_Skout
-- The project currently contains planning and setup documentation only.
-- The next build phase is choosing the app stack and first feature scope.
+- The stack selected for the MVP is FastAPI + SQLModel + SQLite + APScheduler + React + Vite.
+- Outlook integration is intentionally scaffolded as a modular placeholder instead of a full auth flow.
+- Public conference discovery currently uses embedded seed ICS examples and is ready for real fetch logic next.
+- Local preview is now possible from the browser using the frontend dev server.
+- Public scan automation is configured weekly in UTC and depends on the backend process staying active.
+- Password locking is designed as a simple shared gate, not full multi-user auth.
+- “Add to calendar” currently exports ICS, which works well for Outlook, Apple Calendar, and Google Calendar import flows.
+- The current verification pass covered tests and build; visual browser QA may still reveal layout refinements.
+- Automation sources checked included City of Sydney What's On, Bureau of Meteorology snippets, TfNSW/Live Traffic references, Sydney Observatory/Powerhouse, Time and Date, and Time Out Sydney.
+- Repository update on 2026-04-23 is documentation-only for the automation note, plus app scaffold work already present locally.
 
 What is next
-- Decide the initial product scope for the smart calendar app.
-- Choose the frontend, backend, database, and auth stack.
-- Create the first application scaffold.
-- Start with a small feature such as event creation and event listing.
+- Open the frontend in a browser and visually review the first-pass UI.
+- Connect real ICS feeds and add remote fetch caching.
+- Implement Microsoft Graph OAuth and Outlook read sync.
+- Improve calendar rendering density and richer event editing.
+- Add event editing support to complement the new delete flow.
+- Decide whether dismissed scanned suggestions should stay hidden across future rescans or reappear if the source still contains them.
+- Replace the shared password lock with full user auth if this grows beyond MVP sharing.
+- Consider direct one-click provider actions later for Outlook and Google, beyond ICS export.
+- Add authentication and user-specific settings storage if the project expands beyond single-user MVP scope.
+- For the automation, re-check dynamic TfNSW and Live Traffic pages directly before travel-sensitive decisions.
